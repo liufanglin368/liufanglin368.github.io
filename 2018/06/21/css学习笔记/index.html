@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="css学习笔记 简介 CSS是什么？CSS是Cascading Style Sheets的简称，中文称为层叠样式表。    引入方式 行内式 行内式是在标签的style属性中设定CSS样式 1&amp;lt;div style=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;    嵌入式 嵌入式是将CSS样式集中写在网页的标签的标签对中。 123456&amp;lt;head&amp;gt;...&amp;lt;">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/06/21/css学习笔记/index.html">
+<meta property="og:site_name" content="all is well">
+<meta property="og:description" content="css学习笔记 简介 CSS是什么？CSS是Cascading Style Sheets的简称，中文称为层叠样式表。    引入方式 行内式 行内式是在标签的style属性中设定CSS样式 1&amp;lt;div style=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;    嵌入式 嵌入式是将CSS样式集中写在网页的标签的标签对中。 123456&amp;lt;head&amp;gt;...&amp;lt;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.w3school.com.cn/i/ct_css_boxmodel_example.gif">
+<meta property="og:updated_time" content="2018-06-21T06:56:01.987Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css学习笔记">
+<meta name="twitter:description" content="css学习笔记 简介 CSS是什么？CSS是Cascading Style Sheets的简称，中文称为层叠样式表。    引入方式 行内式 行内式是在标签的style属性中设定CSS样式 1&amp;lt;div style=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;    嵌入式 嵌入式是将CSS样式集中写在网页的标签的标签对中。 123456&amp;lt;head&amp;gt;...&amp;lt;">
+<meta name="twitter:image" content="http://www.w3school.com.cn/i/ct_css_boxmodel_example.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: "",
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/21/css学习笔记/"/>
+
+
+
+
+
+  <title>css学习笔记 | all is well</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container  page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">all is well</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/21/css学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liufanglin368">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatars.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="all is well">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">css学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-21T14:50:26+08:00">
+                2018-06-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="css学习笔记"><a href="#css学习笔记" class="headerlink" title="css学习笔记"></a>css学习笔记</h1><hr>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h3><ul>
+<li><strong>CSS是什么</strong>？<br>CSS是Cascading Style Sheets的简称，中文称为层叠样式表。</li>
+</ul>
+<hr>
+<ul>
+<li><strong>引入方式</strong></li>
+<li>行内式<br> 行内式是在标签的style属性中设定CSS样式 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;...&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>嵌入式<br> 嵌入式是将CSS样式集中写在网页的<head>标签的<style></style>标签对中。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">...</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    ...此处写CSS样式</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+</head></li>
+</ul>
+<ul>
+<li>链接式<br>将一个独立的.css文件引入到HTML文件中，使用<link>标记写在<head>标记中。<br>链接式会以网页文件主体装载前装载CSS文件。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    ...</span><br><span class="line">    &lt;link href=&quot;My.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+</head></li>
+</ul>
+<p><strong>样式的应用顺序 :</strong></p>
+<pre><code>- 行内&gt;嵌入&gt;链接
+- 相同样式并且相同属性，呈现方式在&lt;head&gt;中的顺序决定，后面会覆盖前面属性
+- !important  指定样式规则应用最优先
+</code></pre><hr>
+<h3 id="常用选择器（Selector）"><a href="#常用选择器（Selector）" class="headerlink" title="常用选择器（Selector）"></a><strong>常用选择器（Selector）</strong></h3><ol>
+<li>通用元素选择器<br>*表示应用到所有的标签。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*&#123;color: yellow&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li>标签选择器<br>匹配所有使用 div 标签的元素（可以匹配所有标签）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div &#123;color: yellow&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="3">
+<li><p>类选择器<br>匹配所有class属性中包含Mycolor的元素。<br>语法：.类名{样式}（类名不能以数字开头，类名要区分大小写。）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.Mycolor &#123;color: yellow&#125;</span><br><span class="line">&lt;h3 class=&quot;Mycolor&quot;&gt;nick&lt;/h3&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>注意 :</strong> 一个元素的class可以有多个,每个class之间用空格隔开,如果后面的class力的样式与前面的有重复,那后面的会把前面的覆盖了</p>
+</li>
+<li><p>ID选择器<br>使用id属性来调用样式，在一个网页中id的值都是唯一的<br>语法：#ID名{样式}（ID名不能以数字开头）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#Mycolor &#123;color: yellow&#125;</span><br><span class="line">&lt;h3 id=&quot;Mycolor&quot;&gt;Nick.&lt;/h3&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>伪类选择器：<br>1.link、hover、active、visited</p>
+<ul>
+<li>a:link（未访问的链接状态）,用于定义了常规的链接状态。</li>
+<li>a:hover（鼠标放在链接上的状态）,用于产生视觉效果。</li>
+<li>a:active（在链接上按下鼠标时的状态）。</li>
+<li>a:visited（已访问过的链接状态）,可以看出已经访问过的链接。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a:link&#123;color: black&#125;</span><br><span class="line">a:hover&#123;color: yellow&#125;</span><br><span class="line">a:active&#123;color: blue&#125;</span><br><span class="line">a:visited&#123;color: red&#125;</span><br><span class="line"> </span><br><span class="line">&lt;a href=&quot;#&quot;&gt;Nick&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>2.before、after
+- P:before在每个p元素的内容之前插入内容
+- P:after 在每个p元素的内容之后插入内容。
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> p &#123;</span><br><span class="line">    color: yellow;</span><br><span class="line">&#125;</span><br><span class="line">p:before&#123;</span><br><span class="line">    content: &quot;before...&quot;;</span><br><span class="line">&#125;</span><br><span class="line">p:after&#123;</span><br><span class="line">    content: &quot;after...&quot;;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&lt;p&gt; Nick &lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+
+ 6. 群组选择器
+</code></pre><p> 通过逗号的方式选择元素(选择到的是一组元素)<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h3,h4 &#123;color: yellow;&#125;</span><br><span class="line">&lt;h3&gt;Nick&lt;/h3&gt;</span><br><span class="line">&lt;h4&gt;Jenny&lt;/h4&gt;</span><br></pre></td></tr></table></figure></p>
+<pre><code>只要任意一个元素有相同的样式,那就可以用群组选择器放在一起,不过要用逗号隔开,不管他是id选择器,class选择器,标签选择器都可以
+</code></pre><ol start="6">
+<li><p>组合选择器</p>
+<ol>
+<li><p>后代元素选择器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div p &#123;color: yellow;&#125;</span><br><span class="line"> </span><br><span class="line">&lt;div&gt;</span><br><span class="line"> &lt;p&gt;Nick&lt;/p&gt;</span><br><span class="line"> &lt;div&gt;</span><br><span class="line">    &lt;p&gt;Nick&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子元素选择器<br>匹配所有div标签里嵌套的子P标签，之间用&gt;分隔。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div &gt; p &#123;color: yellow;&#125;</span><br><span class="line"> </span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;p&gt;Nick&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;Nick&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>3. 毗邻元素选择器
+匹配所有紧随div标签之后的同级标签P，之间用+分隔（只能匹配一个）。
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div + p &#123;color: yellow;&#125;</span><br><span class="line"> </span><br><span class="line">&lt;div&gt;Nick&lt;/div&gt;</span><br><span class="line">&lt;p&gt;Nick&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+4. 属性选择器：
+`.[title] &amp; P[title]`
+        设置所有具有title属性的标签元素
+</code></pre><p>设置所有具有title属性的P标签元素<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   [title]</span><br><span class="line">&#123;</span><br><span class="line">    color: yellow;</span><br><span class="line">&#125;</span><br><span class="line">p[title]</span><br><span class="line">&#123;</span><br><span class="line">    color: yellow;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&lt;div title&gt;Nick&lt;/div&gt;</span><br><span class="line">&lt;p title&gt;Nick&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<p>   <a href="http://www.w3school.com.cn/cssref/css_selectors.asp" target="_blank" rel="noopener">更多选择器详见文档</a></p>
+<p>   选择器优先级</p>
+<pre><code>- 优先级      按代码执行的顺序
+- 选择器的优先级一致的情况下,谁在后谁的优先级就高
+- 选择器的优先级不一致的情况下,会选择优先级高的
+- 行间样式&gt;id选择器&gt;class(类)选择器&gt;标签选择器&gt;通配符选择器(*)
+
+包含选择器的优先级
+-  包含选择器的优先级取决与位置,谁靠后谁的优先级就高,会把前面的样式给覆盖了
+</code></pre><hr>
+<h3 id="属性（Selector）"><a href="#属性（Selector）" class="headerlink" title="属性（Selector）"></a><strong>属性（Selector）</strong></h3><ul>
+<li>语法<br>通过选择器选择要添加样式的元素,定义它的文字属性,属性的值为红色(特定属性的值可以是多个以一个空格隔开)</li>
+<li>继承<br>  子元素会从父元素继承属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;color:red;&#125;</span><br><span class="line">div &#123;border: 1px solid #000000;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a href="http://www.w3school.com.cn/cssref/index.asp#text" target="_blank" rel="noopener">属性参考手册</a></p>
+<hr>
+<h3 id="盒模型（Box-Model）"><a href="#盒模型（Box-Model）" class="headerlink" title="盒模型（Box Model）"></a><strong>盒模型（Box Model）</strong></h3><p>盒子模型图示：</p>
+<p><img src="http://www.w3school.com.cn/i/ct_css_boxmodel_example.gif" alt="盒模型"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#box &#123;</span><br><span class="line">    width: 70px;</span><br><span class="line">    margin: 10px;</span><br><span class="line">    padding: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>标准盒模型大小计算: border+width/height+padding</p>
+<ul>
+<li>内填充(padding): 用于控制内容与边框之间的距离;<br>  父子级元素之间的距离,可以通过给父级加padding来设置</li>
+<li><p>外边距(margin): 用于控制元素与元素之间的距离;<br>  同级元素之间的距离,通过添加margin来设置</p>
+<ul>
+<li>一个参数，应用于四边。</li>
+<li>两个参数，第一个用于上、下，第二个用于左、右。</li>
+<li>三个参数，第一个用于上，第二个用于左、右，第三个用于下。</li>
+</ul>
+</li>
+<li>margin的问题</li>
+</ul>
+<ol>
+<li>margin传递(只有上下会传递左右不会传递)<br> 子级会把自己的margin-top与margin-bottom传递给父级<br> 解决办法:给父级加上一个边框(其中一个方法)</li>
+<li>margin上下叠压(只有上下会叠压,左右不会叠压)<br>   上边元素的margin-bottom与下边元素的margin-top叠在了一起(他会取大的值)<br>解决办法:只用给一个元素设置margin就可以 (给一个设置为0就可以)</li>
+</ol>
+<ul>
+<li><p>怪异盒模型<br>怪异盒模型出现的原因?<br>ie6，ie7，ie8下文档头缺失(DOCTYPE)会触发怪异模式。</p>
+<p>怪异盒模型大小计算: width/height+margin(（即width已经包含了padding和border值）)</p>
+</li>
+</ul>
+<hr>
+<h3 id="浮动-float"><a href="#浮动-float" class="headerlink" title="浮动(float)"></a><strong>浮动(float)</strong></h3><ul>
+<li>定义  使元素脱离文档流,按照指定的方向发生移动,遇到父级的边界或者相邻的浮动元素就会停下来.</li>
+<li>值        left right none</li>
+<li>特征 <ol>
+<li>块元素可以在一行显示</li>
+<li>按照一个指定的方向移动,遇到父级的边界或者相邻的浮动元素就会停下来</li>
+<li>可以让行内元素支持宽高</li>
+<li>脱离文档流</li>
+<li>块元素的默认宽度会改变（包裹性）<br>块元素不设置宽度，那宽度会自动变成内容所撑开的宽度。</li>
+<li>父级高度塌陷（破环型）<br>子元素有浮动后，那父级元素的高度不会自动撑开了。</li>
+<li>换行符不会被解析成空格<br>浮动后的元素就会脱离文档流了，那他就不属于文档流里的结构了，所以换行/空格都跟父级没关系了;</li>
+</ol>
+</li>
+</ul>
+<h6 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a><strong>清除浮动</strong></h6><ol>
+<li>clear   元素的某个方向上不能有浮动的元素<br>left    元素的左边不能有浮动元素<br>right   元素的右边不能有浮动的元素<br>both     元素的两边都不能有浮动的元素</li>
+<li>给父级添加高度<br> 有的时候是不能给父级添加高度的,所以这个方法用不了(父级没有高度的情况下)</li>
+<li>inline-block<br>  具有与上一个的清除浮动一样的总是,同时加了以后这个元素就没有办法居中了</li>
+<li>overflow:hidden;<br>   如果子级有定位的话,并且这个定位超出了父级的范围,那样的话就看不到了,所以不能加这个命令</li>
+</ol>
+<ul>
+<li>after伪类清除浮动</li>
+</ul>
+<ol start="5">
+<li>空标签<br>空标签是没有内容的,但是他的作用是用来清除浮动的,所以不复合行为,样式.结构相分离的标准<br> ie6下标签是由个最小高度19px.解决后也会有2像素的偏差</li>
+<li> br清除浮动<br>  <br clear="all"><br>  和上面的问题一样,不复合标准</li>
+<li> after伪类清除浮动(现在最主流的方法)没有不良问题<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:after&#123;</span><br><span class="line">       content:``;</span><br><span class="line">       display:block;</span><br><span class="line">       clear:both;</span><br><span class="line">&#125;</span><br><span class="line"> &lt;div 类 :&quot;clearfix&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h3 id="定位-position"><a href="#定位-position" class="headerlink" title="定位(position)"></a><strong>定位(position)</strong></h3><ul>
+<li><p>默认值  statc 不定位</p>
+</li>
+<li><p>相对定位<br>position         定位</p>
+<ul>
+<li>relative      相对定位<br>通过以下四种属性进行定位： top right bottom left</li>
+<li>特点   <ol>
+<li>只加相对定位,不设置元素移动的位置,元素和之前是没有变化</li>
+<li>更具之间原来的位置计算移动的位置</li>
+<li>不脱离文档流,元素移走以后,原来的位置还会被保留</li>
+<li>加上相对定位后对原来的元素本身的特征没有影响</li>
+<li>提升层级</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>绝对定位</p>
+<pre><code>absolute     绝对定位
+</code></pre><ul>
+<li>特点    <ol>
+<li>完全脱离文档流</li>
+<li>行内元素支持所有样式(与加上浮动或者inline-block以后的效果是一样的)</li>
+<li>如果父级有定位,那位置会根据父级移动.如果父级没有定位,那位置根据可视区移动<br>(一般情况下,要用到绝对定位的时候,都会给父级来一个相对定位)<em>**</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>固定定位<br>   fixed      固定定位</p>
+<ul>
+<li>特点 </li>
+</ul>
+<ol>
+<li>完全脱离文档流</li>
+<li>行内元素支持所有样式</li>
+<li>相对可视区来移动位置</li>
+<li>提升层级</li>
+<li>触发BFC</li>
+</ol>
+</li>
+<li><p>层级</p>
+<p>在正常情况下层级的大小由顺序决定,后面的元素要比前面的元素的层级要高</p>
+<p>有定位元素的层级要比没有定位元素层级要高<br>在都有定位的情况下,层级还是取决与书写顺序</p>
+<p>z-index        层级</p>
+<pre><code>它的值是一个数字,数字越大层级越高(在同一个层里)
+</code></pre></li>
+</ul>
+<hr>
+<p>参考一: <a href="http://www.w3school.com.cn/css/index.asp" target="_blank" rel="noopener">w3school</a><br>参考二: <a href="https://www.cnblogs.com/suoning/p/5625582.html#ss11" target="_blank" rel="noopener">cnblogs/suoning</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/13/html-超文本标记语言/" rel="next" title="html(超文本标记语言)">
+                <i class="fa fa-chevron-left"></i> html(超文本标记语言)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatars.jpg"
+                alt="liufanglin368" />
+            
+              <p class="site-author-name" itemprop="name">liufanglin368</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/liufanglin368" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#css学习笔记"><span class="nav-number">1.</span> <span class="nav-text">css学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.0.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用选择器（Selector）"><span class="nav-number">1.0.2.</span> <span class="nav-text">常用选择器（Selector）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性（Selector）"><span class="nav-number">1.0.3.</span> <span class="nav-text">属性（Selector）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒模型（Box-Model）"><span class="nav-number">1.0.4.</span> <span class="nav-text">盒模型（Box Model）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动-float"><span class="nav-number">1.0.5.</span> <span class="nav-text">浮动(float)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#清除浮动"><span class="nav-number">1.0.5.0.0.1.</span> <span class="nav-text">清除浮动</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位-position"><span class="nav-number">1.0.6.</span> <span class="nav-text">定位(position)</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liufanglin368</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
