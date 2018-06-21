@@ -88,7 +88,7 @@
 <meta property="og:description" content="css学习笔记 简介 CSS是什么？CSS是Cascading Style Sheets的简称，中文称为层叠样式表。    引入方式 行内式 行内式是在标签的style属性中设定CSS样式 1&amp;lt;div style=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;    嵌入式 嵌入式是将CSS样式集中写在网页的标签的标签对中。 123456&amp;lt;head&amp;gt;...&amp;lt;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.w3school.com.cn/i/ct_css_boxmodel_example.gif">
-<meta property="og:updated_time" content="2018-06-21T07:00:06.467Z">
+<meta property="og:updated_time" content="2018-06-21T07:01:13.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css学习笔记">
 <meta name="twitter:description" content="css学习笔记 简介 CSS是什么？CSS是Cascading Style Sheets的简称，中文称为层叠样式表。    引入方式 行内式 行内式是在标签的style属性中设定CSS样式 1&amp;lt;div style=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;    嵌入式 嵌入式是将CSS样式集中写在网页的标签的标签对中。 123456&amp;lt;head&amp;gt;...&amp;lt;">
@@ -417,10 +417,8 @@
 <pre><code>2. before、after
 - P:before在每个p元素的内容之前插入内容
 - P:after 在每个p元素的内容之后插入内容。
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> p &#123;</span><br><span class="line">    color: yellow;</span><br><span class="line">&#125;</span><br><span class="line">p:before&#123;</span><br><span class="line">    content: &quot;before...&quot;;</span><br><span class="line">&#125;</span><br><span class="line">p:after&#123;</span><br><span class="line">    content: &quot;after...&quot;;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&lt;p&gt; Nick &lt;/p&gt;</span><br></pre></td></tr></table></figure>
-
-
- 6. 群组选择器
+</code></pre>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> p &#123;</span><br><span class="line">    color: yellow;</span><br><span class="line">&#125;</span><br><span class="line">p:before&#123;</span><br><span class="line">    content: &quot;before...&quot;;</span><br><span class="line">&#125;</span><br><span class="line">p:after&#123;</span><br><span class="line">    content: &quot;after...&quot;;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&lt;p&gt; Nick &lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>6. 群组选择器
 </code></pre><p> 通过逗号的方式选择元素(选择到的是一组元素)<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h3,h4 &#123;color: yellow;&#125;</span><br><span class="line">&lt;h3&gt;Nick&lt;/h3&gt;</span><br><span class="line">&lt;h4&gt;Jenny&lt;/h4&gt;</span><br></pre></td></tr></table></figure></p>
 <pre><code>只要任意一个元素有相同的样式,那就可以用群组选择器放在一起,不过要用逗号隔开,不管他是id选择器,class选择器,标签选择器都可以
 </code></pre><ol start="6">
